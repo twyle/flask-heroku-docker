@@ -23,7 +23,7 @@ This project shows how to lauch a production grade application to AWS EC2. It is
 - ***A User Creation System.***
 - ***Uses the PostgresQL Database to store both users as well as authentication and authorization information.***
 - ***A logging system that logs to file and sends emails on critical errors.***
-- ***It is deployed to an AWS EC2 instance with gunicorn server and nginx as a proxy.***
+- ***It is deployed to Heroku.***
 
 If you want to learn more about how it was developed, read ***[How to Deploy a Containerized Flask Application to Heroku using GitHub Actions](https://medium.com/@lyle-okoth/how-to-deploy-a-containerized-flask-application-to-heroku-using-github-actions-b0353880afc6)***. 
 
@@ -102,16 +102,16 @@ Simply returns the created, updated, deleted or requested user:
 
 # Installation
 
-### Clone the [Flask EC2 Deployment repo](https://github.com/twyle/flask-ec2-deployment)
+### Clone the [Flask Heroku docker Deployment repo](https://github.com/twyle/flask-heroku-docker)
 
 ```sh
-git clone https://github.com/twyle/flask-ec2-deployment.git
+git clone https://github.com/twyle/flask-heroku-docker.git
 ```
 
 ### Navigate into the cloned repo
 
 ```sh
-cd flask-ec2-deployment
+cd flask-heroku-docker
 ```
 
 ### Create a Python3 Virtual Environment.
@@ -227,7 +227,7 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 ## Contributing
 
-1. Fork it https://github.com/twyle/flask-ec2-deployment/fork
+1. Fork it https://github.com/twyle/flask-heroku-docker/fork
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
