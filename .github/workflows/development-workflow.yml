@@ -23,7 +23,7 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_USER: ${{secrets.USER}}
+          POSTGRES_USER: ${{secrets.POSTGRES_USER}}
           POSTGRES_PASSWORD: ${{secrets.POSTGRES_PASSWORD}}
           POSTGRES_PORT: ${{secrets.POSTGRES_PORT}}
           POSTGRES_DB: ${{secrets.POSTGRES_DB}}
@@ -196,13 +196,13 @@ jobs:
             POSTGRES_PASSWORD
         env:
           FLASK_ENV: ${{ secrets.FLASK_ENV }}
-          FLASK_APP: ${{ secrets.FLASK_ENV }}
-          SECRET_KEY: ${{ secrets.FLASK_ENV }}
-          POSTGRES_HOST: ${{ secrets.FLASK_ENV }}
-          POSTGRES_DB: ${{ secrets.FLASK_ENV }}
-          POSTGRES_PORT: ${{ secrets.FLASK_ENV }}
-          POSTGRES_USER: ${{ secrets.FLASK_ENV }}
-          POSTGRES_PASSWORD: ${{ secrets.FLASK_ENV }}
+          FLASK_APP: ${{ secrets.FLASK_APP }}
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
+          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+          POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
 
   Test-Remote:
 
