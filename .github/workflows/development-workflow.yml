@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  APP_NAME: heroku-container
+  APP_NAME: flask-heroku-container
 
 jobs:
 
