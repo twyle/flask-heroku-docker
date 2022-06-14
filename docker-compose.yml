@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       POSTGRES_HOST: localhost
-      POSTGRES_DB: lyle_test
+      POSTGRES_DB: lyle
       POSTGRES_PORT: 5432
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: lyle
@@ -22,7 +22,7 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     environment:
       POSTGRES_HOST: localhost
-      POSTGRES_DB: lyle_dev
+      POSTGRES_DB: lyle
       POSTGRES_PORT: 5432
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: lyle
