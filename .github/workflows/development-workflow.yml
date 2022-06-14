@@ -104,7 +104,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: lyle
           POSTGRES_PORT: ${{secrets.POSTGRES_PORT}}
-          POSTGRES_DB: lyle_dev
+          POSTGRES_DB: lyle
         ports:
           - 5432:5432
         options: >-
