@@ -1,5 +1,5 @@
-# Flask EC2 Deployment.
-> This is a simple flask application that shows how to deploy a production grade application to AWS EC2.
+# A Containerized Flask App Deployed to Heroku.
+> A Simple Flask API dockerized and deployed to Heroku. 
 
 [![Feature Development Build](https://github.com/twyle/flask-ec2-deployment/actions/workflows/feature-development-workflow.yml/badge.svg)](https://github.com/twyle/flask-ec2-deployment/actions/workflows/feature-development-workflow.yml)
 [![Development Build](https://github.com/twyle/flask-ec2-deployment/actions/workflows/development-workflow.yml/badge.svg)](https://github.com/twyle/flask-ec2-deployment/actions/workflows/development-workflow.yml)
@@ -14,15 +14,13 @@
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![Gunicorn](https://img.shields.io/badge/gunicorn-%298729.svg?style=for-the-badge&logo=gunicorn&logoColor=white)
 
-![](flask-ec2-cover.png)
+![](flask-docker-heroku.png)
 
-## Introduction
+ion application restarted with the changes.
 
-The API itself is a simple flask application that enables an admnistrator to register. Upon logging in, they are issued with an access token that allows them to create a new user. You can read more about it, including how it was developed over at [How to Deploy a Production Grade Flask application to an AWS EC2 Instance using GitHub Actions.](https://medium.com/@lyle-okoth/how-to-deploy-a-production-grade-flask-application-to-an-aws-ec2-instance-using-github-actions-6241886b197).
+**The application routes.** 
 
-## Application routes
-
-This interaction with the application happens overthe following routes:
+The API has nine routes.
 
 | Route       | Method      | Description      |
 | ----------- | ----------- |----------------- |
@@ -254,8 +252,8 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 [https://github.com/twyle/github-link](https://github.com/twyle/)
 
 ## Contributing
-
-1. Fork it https://github.com/twyle/flask-ec2-deployment/fork
+  
+1. Fork it https://github.com/twyle/flask-heroku-docker/fork
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
