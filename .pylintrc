@@ -155,6 +155,7 @@ disable=print-statement,
         no-member,
         import-error,
         logging-fstring-interpolation,
+        broad-except,
 
 
 # Enable the message, report, category or checker with the given id(s). You can
