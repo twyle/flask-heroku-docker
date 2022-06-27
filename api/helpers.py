@@ -123,7 +123,7 @@ def check_if_database_exists(db_connection_string: str) -> bool:
     return db_exists
 
 
-def are_environment_variables_set() -> bool:  # pylint: disable=R0912,R0911,R0915
+def are_environment_variables_set() -> bool:  # pylint: disable=R0912,R0915,R0911
     """Check if all the environment variables are set.
 
     Raises
@@ -195,28 +195,49 @@ def are_environment_variables_set() -> bool:  # pylint: disable=R0912,R0911,R091
 
     try:
         os.environ['MAIL_HOST']  # pylint: disable=W0104
-        app_logger.info(f"The MAIL_HOST is set to {os.environ['MAIL_HOST']}")
+        app_logger.info("The MAIL_HOST is set.")
     except KeyError:
         app_logger.exception('The MAIL_HOST is not set')
         return False
 
     try:
         os.environ['MAIL_PORT']  # pylint: disable=W0104
-        app_logger.info(f"The MAIL_PORT is set to {os.environ['MAIL_PORT']}")
+        app_logger.info("The MAIL_PORT is set.")
     except KeyError:
         app_logger.exception('The MAIL_PORT is not set')
         return False
 
     try:
         os.environ['MAIL_USERNAME']  # pylint: disable=W0104
-        app_logger.info(f"The MAIL_USERNAME is set to {os.environ['MAIL_USERNAME']}")
+        app_logger.info("The MAIL_USERNAME is set.")
     except KeyError:
         app_logger.exception('The MAIL_USERNAME is not set')
         return False
 
     try:
+        os.environ['AWS_KEY']  # pylint: disable=W0104
+        app_logger.info("The AWS_KEY is set.")
+    except KeyError:
+        app_logger.exception('The AWS_KEY is not set')
+        return False
+
+    try:
+        os.environ['AWS_SECRET']  # pylint: disable=W0104
+        app_logger.info("The AWS_SECRET is set.")
+    except KeyError:
+        app_logger.exception('The AWS_SECRET is not set')
+        return False
+
+    try:
+        os.environ['AWS_REGION']  # pylint: disable=W0104
+        app_logger.info("The AWS_REGION is set.")
+    except KeyError:
+        app_logger.exception('The AWS_REGION is not set')
+        return False
+
+    try:
         os.environ['MAIL_PASSWORD']  # pylint: disable=W0104
-        app_logger.info(f"The MAIL_PASSWORD is set to {os.environ['MAIL_PASSWORD']}")
+        app_logger.info("The MAIL_PASSWORD is set.")
     except KeyError:
         app_logger.exception('The MAIL_PASSWORD is not set')
         return False

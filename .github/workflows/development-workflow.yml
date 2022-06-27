@@ -82,6 +82,10 @@ jobs:
 
         echo FIREHOSE_DELIVERY_STREAM=${{secrets.FIREHOSE_DELIVERY_STREAM}} >> .env
 
+        echo AWS_KEY=${{secrets.AWS_KEY}} >> .env
+        echo AWS_SECRET=${{secrets.AWS_SECRET}} >> .env
+        echo AWS_REGION=${{secrets.AWS_REGION}} >> .env
+
     - name: Create the test tables
       run: |
         python manage.py create_db
@@ -161,6 +165,10 @@ jobs:
 
         echo FIREHOSE_DELIVERY_STREAM=${{secrets.FIREHOSE_DELIVERY_STREAM}} >> .env
 
+        echo AWS_KEY=${{secrets.AWS_KEY}} >> .env
+        echo AWS_SECRET=${{secrets.AWS_SECRET}} >> .env
+        echo AWS_REGION=${{secrets.AWS_REGION}} >> .env
+
     - name: Create the development tables
       run: |
         python manage.py create_db
@@ -215,6 +223,9 @@ jobs:
             MAIL_USERNAME
             MAIL_PASSWORD
             FIREHOSE_DELIVERY_STREAM
+            AWS_KEY
+            AWS_SECRET
+            AWS_REGION
         env:
           FLASK_ENV: ${{ secrets.FLASK_ENV }}
           FLASK_APP: ${{ secrets.FLASK_APP }}
@@ -229,6 +240,9 @@ jobs:
           MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
           MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
           FIREHOSE_DELIVERY_STREAM: ${{ secrets.FIREHOSE_DELIVERY_STREAM }}
+          AWS_KEY: ${{ secrets.AWS_KEY }}
+          AWS_SECRET: ${{ secrets.AWS_SECRET }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
 
   Test-Remote:
 
