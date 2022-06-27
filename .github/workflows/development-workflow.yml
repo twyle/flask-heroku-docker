@@ -185,7 +185,7 @@ jobs:
 
     name: Deploy to Dev
 
-    if: github.event_name == 'pull_request'
+    #if: github.event_name == 'pull_request'
 
     needs: [Test-Local]
 
